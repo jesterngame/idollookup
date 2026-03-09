@@ -82,8 +82,6 @@ export const idolgroups = [
     genre: "Jpop",
     description:`<p>
             We are Seiryou Process! よろしくお願いします🙇‍♀️🙇‍♂️ A self-produced Australian kaigai idol duo reaching for the stars. Based in Brisbane and established in September 2022, we have been fortunate enough to perform on stages around the country and are ready to take the next step on our journey.
-            <br\><br\>
-            Join us for a real look at the whole (seiryou) process with exclusive behind the scenes content and more!
             </p>
         <br><i>From Patreon 10/3/26</i>`,
     socials: [
