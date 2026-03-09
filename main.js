@@ -1,4 +1,4 @@
-import { fruits } from "./idols.js";
+import { idols } from "./idols.js";
 
 function formatDate(date){
   const d = new Date(date)
@@ -269,4 +269,5 @@ function renderIdolGroup(id){
 }
 
 renderIdolGroupList(idolgroups)
+
 
