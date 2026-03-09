@@ -42,7 +42,6 @@ footer {
     padding: 15px;
 }
 
-/* 📱 Responsive layout */
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
@@ -50,10 +49,10 @@ footer {
 }
 
 .circle-img {
-  width: 100px;      /* Set a fixed width */
-  height: 100px;     /* Set a fixed height (must be the same as width for a perfect circle) */
-  border-radius: 50%; /* This rounds the corners into a circle */
-  object-fit: cover;  /* Ensures the image covers the area without stretching */
+  width: 100px;
+  height: 100px;
+  border-radius: 50%; 
+  object-fit: cover;
 }
 
 .idol-group-members {
@@ -104,4 +103,29 @@ footer {
 
 .group-search-container {
     justify-content: center;
+}
+
+
+.searchpage {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+.searchbar {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-size: 2em;
+    text-align: center;
+    align-items: center
+}
+
+#search {
+    height: 30px;
+    width: 300px;
 }
