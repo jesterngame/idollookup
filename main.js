@@ -42,7 +42,7 @@ function renderIdolGroup(idtext){
     $("#search").val('');
     let id = Number(idtext);
 
-    const idolgroup = idolgroups.find(group=>group.id=id);
+    const idolgroup = idolgroups.find(group=>group.id===id);
 
     const idolmembers = idols.filter(idols=>idols.group.includes(id));
 
@@ -180,6 +180,7 @@ renderIdolGroupList(idolgroups);
 $('#group-search-button').on("click", function(){
   renderIdolGroupList(idolgroups);
 });
+
 
 
 
