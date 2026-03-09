@@ -144,7 +144,7 @@ function renderIdolGroup(id){
     console.log("ID");
     console.log(id);
     console.log("Idol groups from ID");
-    const idolgroup = idolgroups.find(group=>group.id===id);
+    const idolgroup = idolgroups.find(group=>group.id=id);
     console.log(idolgroup);
   
     console.log("Id old from ID");
@@ -284,6 +284,7 @@ searchInput.addEventListener("input", function(){
 });
 
 renderIdolGroupList(idolgroups)
+
 
 
 
