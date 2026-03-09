@@ -269,9 +269,3 @@ function renderIdolGroup(id){
 }
 
 renderIdolGroupList(idolgroups)
-
-
-
-
-
-
