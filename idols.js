@@ -9,11 +9,11 @@ export const idols = [
         socials: [
             {
                 type: "instagram",
-                link: ""
+                link: "https://www.instagram.com/ohmyisabella"
             },
             {
                 type: "twitter",
-                link: ""
+                link: "https://x.com/OhmyIsabellaa"
             }
         ]
     },
@@ -27,11 +27,11 @@ export const idols = [
         socials: [
             {
                 type: "instagram",
-                link: ""
+                link: "https://www.instagram.com/bloomymei"
             },
             {
                 type: "twitter",
-                link: ""
+                link: "https://x.com/japchefreak"
             }
         ]
     },
@@ -45,11 +45,11 @@ export const idols = [
         socials: [
             {
                 type: "instagram",
-                link: ""
+                link: "https://www.instagram.com/misty_bloomingblue"
             },
             {
                 type: "twitter",
-                link: ""
+                link: "https://x.com/misty_bloomblue"
             }
         ]
     },
@@ -63,7 +63,7 @@ export const idols = [
         socials: [
             {
                 type: "instagram",
-                link: "https://www.instagram.com/snacktimeidols"
+                link: "https://www.instagram.com/purinpuddin"
             }
         ]
     },
@@ -77,7 +77,7 @@ export const idols = [
         socials: [
             {
                 type: "instagram",
-                link: ""
+                link: "https://www.instagram.com/ada.apples"
             }
         ]
     },
@@ -91,7 +91,7 @@ export const idols = [
         socials: [
             {
                 type: "instagram",
-                link: ""
+                link: "https://www.instagram.com/chiidolz"
             }
         ]
     },
@@ -102,12 +102,7 @@ export const idols = [
         image: "temp_portrait.png",
         idoltype: "Soda",
         colour: "Orange",
-        socials: [
-            {
-                type: "instagram",
-                link: ""
-            }
-        ]
+        socials: []
     },
     {
         id: 8,
@@ -132,3 +127,5 @@ export const idols = [
         ]
     },
 ];
+
+
