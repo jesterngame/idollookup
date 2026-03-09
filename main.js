@@ -1,5 +1,6 @@
 import {idols} from './idols.js';
 import {idolgroups} from './idolgroups.js';
+import {events} from './events.js';
 
 console.log("test code runs");
 console.log(idols);
@@ -36,27 +37,6 @@ function makeSocials(type, link, size){
 
     return socialHtml
 }
-
-const events = [
-    {
-        id:1,
-        name: "Unknown Event",
-        city: "Brisbane/Meanjin",
-        address: "Not yet known",
-        ticketlink: "",
-        groups: [2],
-        date: new Date(2026, 3, 13) // year, month (0-11), day
-    },
-    {
-        id:2,
-        name: "animaga Sunday",
-        city: "Sydney/Gadigal",
-        address: "ICC Sydney",
-        ticketlink: "http://instagram.com/animagaexpo",
-        groups: [3],
-        date: new Date(2026, 2, 15) // year, month (0-11), day
-    }
-];
 
 const app = document.getElementById("app");
 
@@ -210,6 +190,7 @@ renderIdolGroupList(idolgroups);
 $('#group-search-button').on("click", function(){
   renderIdolGroupList(idolgroups);
 });
+
 
 
 
