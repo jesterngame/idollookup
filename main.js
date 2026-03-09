@@ -232,13 +232,13 @@ function renderIdolGroup(id){
 
 console.log("After renderIdolGroup defined");
 
-function renderIdolGroupList(list){
-    $("#groupsearch").removeClass('hidden');
+function renderIdolGroupList(list = []){
+  $("#groupsearch").removeClass('hidden');
   let idolGroupHtml = ``;
 
   list.forEach(group=>{
     idolGroupHtml += `
-      <div class="idolgroup" id = "${group.id}">
+      <div class="idolgroup" id="${group.id}">
         <img class="idol-logo-search" src="${group.logo}" alt="idol logo">
         <div class="idolgroup-info">
             <strong>${group.name}</strong>
@@ -260,7 +260,7 @@ function renderIdolGroupList(list){
 
   app.innerHTML = idolGroupPage;
 
-  $(".idolgroup").addEventListener("onclick", renderIdolGroupList($(this).attr("id")));
+  $(".idolgroup").addEventListener("onclick", renderIdolGroup($(this).attr("id")));
 
 
 };
@@ -279,6 +279,7 @@ searchInput.addEventListener("input", function(){
 });
 
 renderIdolGroupList(idolgroups)
+
 
 
 
