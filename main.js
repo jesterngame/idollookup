@@ -283,9 +283,10 @@ $("#search").addEventListener("input", function(){
 
 renderIdolGroupList(idolgroups);
 
-$('#group-search-button')t.addEventListener("onclick", function(){
+$('#group-search-button').addEventListener("onclick", function(){
   renderIdolGroupList(idolgroups);
 });
+
 
 
 
