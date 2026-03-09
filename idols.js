@@ -3,7 +3,7 @@ export const idols = [
         id: 1,
         group: [1],
         name: "Isabella",
-        image: "temp_portrait.png",
+        image: "imgs/temp_portrait.png",
         idoltype: "",
         colour: "Pink",
         socials: [
@@ -21,7 +21,7 @@ export const idols = [
         id: 2,
         group: [1],
         name: "Mei",
-        image: "temp_portrait.png",
+        image: "imgs/temp_portrait.png",
         idoltype: "",
         colour: "Green",
         socials: [
@@ -39,7 +39,7 @@ export const idols = [
         id: 3,
         group: [1],
         name: "Misty",
-        image: "temp_portrait.png",
+        image: "imgs/temp_portrait.png",
         idoltype: "",
         colour: "Blue",
         socials: [
@@ -57,7 +57,7 @@ export const idols = [
         id: 4,
         group: [2],
         name: "Xeek",
-        image: "temp_portrait.png",
+        image: "imgs/temp_portrait.png",
         idoltype: "Custard Pudding",
         colour: "Yellow",
         socials: [
@@ -71,7 +71,7 @@ export const idols = [
         id: 5,
         group: [2],
         name: "Ada",
-        image: "temp_portrait.png",
+        image: "imgs/temp_portrait.png",
         idoltype: "Fruit",
         colour: "Red",
         socials: [
@@ -85,7 +85,7 @@ export const idols = [
         id: 6,
         group: [2],
         name: "Chiise",
-        image: "temp_portrait.png",
+        image: "imgs/temp_portrait.png",
         idoltype: "Cheese",
         colour: "Blue",
         socials: [
@@ -99,7 +99,7 @@ export const idols = [
         id: 7,
         group: [2],
         name: "Hina",
-        image: "temp_portrait.png",
+        image: "imgs/temp_portrait.png",
         idoltype: "Soda",
         colour: "Orange",
         socials: []
@@ -127,6 +127,7 @@ export const idols = [
         ]
     },
 ];
+
 
 
 
