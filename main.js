@@ -134,50 +134,6 @@ const events = [
 
 const app = document.getElementById("app");
 
-function renderIdolGroupList(list){
-    $("#groupsearch").removeClass('hidden');
-  let idolGroupHtml = ``;
-
-  list.forEach(group=>{
-    idolGroupHtml += `
-      <div class="idolgroup" onclick="renderIdolGroup(${group.id})">
-        <img class="idol-logo-search" src="${group.logo}" alt="idol logo">
-        <div class="idolgroup-info">
-            <strong>${group.name}</strong>
-            <div>${group.location}</div>
-        </div>
-      </div>
-    `
-  });
-
-  let idolGroupPage = `
-    <div class="container">
-        <div class="column searchpage">
-            <div class="group-search-container">
-                ${idolGroupHtml}
-            </div>
-        </div>
-    </div>
-  `;
-
-  app.innerHTML = idolGroupPage;
-
-
-};
-
-const searchInput = document.getElementById("search");
-
-searchInput.addEventListener("input", function(){
-
-  const query = this.value.toLowerCase()
-
-  const filtered = idolgroups.filter(idolgroup =>
-    idolgroup.name.toLowerCase().includes(query)
-  )
-
-  renderIdolGroupList(filtered);
-})
-
 function renderIdolGroup(id){
     $("#groupsearch").addClass('hidden');
     $("#search").val('');
@@ -266,6 +222,51 @@ function renderIdolGroup(id){
             </div>
         </div>
     `
-}
+};
+
+function renderIdolGroupList(list){
+    $("#groupsearch").removeClass('hidden');
+  let idolGroupHtml = ``;
+
+  list.forEach(group=>{
+    idolGroupHtml += `
+      <div class="idolgroup" onclick="renderIdolGroup(${group.id})">
+        <img class="idol-logo-search" src="${group.logo}" alt="idol logo">
+        <div class="idolgroup-info">
+            <strong>${group.name}</strong>
+            <div>${group.location}</div>
+        </div>
+      </div>
+    `
+  });
+
+  let idolGroupPage = `
+    <div class="container">
+        <div class="column searchpage">
+            <div class="group-search-container">
+                ${idolGroupHtml}
+            </div>
+        </div>
+    </div>
+  `;
+
+  app.innerHTML = idolGroupPage;
+
+
+};
+
+const searchInput = document.getElementById("search");
+
+searchInput.addEventListener("input", function(){
+
+  const query = this.value.toLowerCase()
+
+  const filtered = idolgroups.filter(idolgroup =>
+    idolgroup.name.toLowerCase().includes(query)
+  )
+
+  renderIdolGroupList(filtered);
+});
 
 renderIdolGroupList(idolgroups)
+
