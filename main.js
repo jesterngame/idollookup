@@ -1,5 +1,5 @@
 import { idols } from "./idols.js"
-
+console.log(idols);
 function formatDate(date){
   const d = new Date(date)
   const day = String(d.getDate()).padStart(2,'0')
@@ -260,3 +260,4 @@ function renderIdolGroup(id){
 
 
 renderIdolGroupList()
+
