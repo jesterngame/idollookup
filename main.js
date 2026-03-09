@@ -259,5 +259,6 @@ function renderIdolGroup(id){
 }
 
 
-renderIdolGroupList()
+renderIdolGroupList();
+
 
