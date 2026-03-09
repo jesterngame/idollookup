@@ -238,7 +238,7 @@ function renderIdolGroupList(list){
 
   list.forEach(group=>{
     idolGroupHtml += `
-      <div class="idolgroup" onclick="renderIdolGroup(${group.id})">
+      <div class="idolgroup" id = "${group.id}">
         <img class="idol-logo-search" src="${group.logo}" alt="idol logo">
         <div class="idolgroup-info">
             <strong>${group.name}</strong>
@@ -260,6 +260,8 @@ function renderIdolGroupList(list){
 
   app.innerHTML = idolGroupPage;
 
+  $(".idolgroup").addEventListener("onclick", renderIdolGroupList($(this).attr("id")));
+
 
 };
 
@@ -277,6 +279,7 @@ searchInput.addEventListener("input", function(){
 });
 
 renderIdolGroupList(idolgroups)
+
 
 
 
