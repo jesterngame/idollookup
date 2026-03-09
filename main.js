@@ -138,9 +138,10 @@ const events = [
 const app = document.getElementById("app");
 
 console.log("Before renderIdolGroup defined");
-function renderIdolGroup(id){
+function renderIdolGroup(idtext){
     $("#groupsearch").addClass('hidden');
     $("#search").val('');
+    let id = Number(idtext);
     console.log("ID");
     console.log(id);
     console.log("Idol groups from ID");
@@ -286,6 +287,7 @@ renderIdolGroupList(idolgroups);
 $('#group-search-button').addEventListener("onclick", function(){
   renderIdolGroupList(idolgroups);
 });
+
 
 
 
