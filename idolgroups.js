@@ -3,7 +3,7 @@ export const idolgroups = [
     id:1,
     name:"Bloom Idol Project",
     location:"Brisbane/Meanjin",
-    logo: "bloomlogo_400x400.jpg",
+    logo: "imgs/bloomlogo_400x400.jpg",
     genre: "Jpop", 
     description:`
         <p>Hello Blossoms, We are Bloom Idol Project! 
@@ -25,7 +25,7 @@ export const idolgroups = [
     id:2,
     name:"SnackTime Idols!",
     location:"Brisbane/Meanjin",
-    logo: "snacktimelogo.jpg",
+    logo: "imgs/snacktimelogo.jpg",
     genre: "Jpop", 
     description:`<p>Yum yum! We are Snack Time Idols (スナックタイム) a Kaigai Jpop Idol Trio from Brisbane. We perform singing and dancing with songs from anime, to jpop, to Australian based idol groups. Come along to watch a delicious performance that’s high energy and full of heart from our 3 appetising idols.
 
@@ -43,7 +43,7 @@ export const idolgroups = [
     id:3,
     name:"Sunnysaurus",
     location:"Sydney/Gadigal",
-    logo: "sunnylogo.png",
+    logo: "imgs/sunnylogo.png",
     genre: "Jpop, Eurobeat, EDM, Rock",
     description:`<p>
             Passionate about community and inclusivity Sunny has been actively performing and creating live events within the Australian J-idol scene since 2019. Previously a member of MEWS Au they are now the founder and leader of idol group FAEBLE as well as a solo performer. 
