@@ -16,5 +16,14 @@ export const events = [
         ticketlink: "http://instagram.com/animagaexpo",
         groups: [3],
         date: new Date(2026, 2, 15) // year, month (0-11), day
+    },
+    {
+        id:3,
+        name: "Full Throttle Idol Relay Live",
+        city: "Brisbane/Meanjin",
+        address: "Hamilton Town Hall",
+        ticketlink: "https://events.humanitix.com/full-throttle-idol-relay-live",
+        groups: [5,6,7],
+        date: new Date(2026, 2, 14) // year, month (0-11), day
     }
 ];
