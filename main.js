@@ -112,7 +112,7 @@ const idolgroups = [
         }
     ]
   }
-]
+];
 
 const events = [
     {
@@ -136,6 +136,12 @@ const events = [
 ];
 
 const app = document.getElementById("app");
+
+console.log("Idol groups from ID");
+console.log(idolgroups.find(group=>group.id===id));
+
+console.log("Idold from ID");
+console.log(idols.filter(idols=>idols.group.includes(id)));
 
 function renderIdolGroup(id){
     $("#groupsearch").addClass('hidden');
@@ -272,6 +278,7 @@ searchInput.addEventListener("input", function(){
 });
 
 renderIdolGroupList(idolgroups)
+
 
 
 
