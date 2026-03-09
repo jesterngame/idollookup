@@ -73,5 +73,156 @@ export const idolgroups = [
             link: "https://www.sunnysaurus.net/"
         }
     ]
+  },
+  {
+    id:4,
+    name:"Seiryou Process ☆ 星稜プロセス",
+    location:"Brisbane/Meanjin",
+    logo: "",
+    genre: "Jpop",
+    description:`<p>
+            We are Seiryou Process! よろしくお願いします🙇‍♀️🙇‍♂️ A self-produced Australian kaigai idol duo reaching for the stars. Based in Brisbane and established in September 2022, we have been fortunate enough to perform on stages around the country and are ready to take the next step on our journey.
+            <br\><br\>
+            Join us for a real look at the whole (seiryou) process with exclusive behind the scenes content and more!
+            </p>
+        <br><i>From Patreon 10/3/26</i>`,
+    socials: [
+        {
+            type: "instagram",
+            link: "https://www.instagram.com/sei.pro"
+        },
+        {
+            type: "tiktok",
+            link: "https://www.tiktok.com/@sei.pro"
+        },
+        {
+            type: "youtube",
+            link: "www.youtube.com/@SeiryouProcess"
+        },
+        {
+            type: "twitter",
+            link: "https://x.com/sunnyysaurus"
+        },
+        {
+            type: "patreon",
+            link: "https://www.patreon.com/cw/SeiryouProcess"
+        }
+    ]
+  },
+  {
+    id:5,
+    name:"A-MUSE",
+    location:"Brisbane/Meanjin",
+    logo: "",
+    genre: "Jpop",
+    description:`<p>
+            Beginning in 2014, A-MUSE formed as a humble one-time cosplay and dance project. Since then, we have morphed into an Australian idol group that performs  a wide variety of Japanese pop and idol music not only within Brisbane, but across Australia!  Driven by our passion for idols, we aim to make the scene more accessible for those who can't make it to Japan to partake in this fun and exciting culture.
+            </p>
+        <br><i>From Youtube 10/3/26</i>`,
+    socials: [
+        {
+            type: "instagram",
+            link: "https://www.instagram.com/amuse_pro"
+        },
+        {
+            type: "tiktok",
+            link: "https://tiktok.com/@amuse_pro"
+        },
+        {
+            type: "youtube",
+            link: "www.youtube.com/@AMUSE_PRO"
+        },
+        {
+            type: "twitter",
+            link: "https://twitter.com/amuse_pro"
+        },
+        {
+            type: "website",
+            link: "https://www.amuse-project.com/"
+        },
+        {
+            type: "patreon",
+            link: "https://www.patreon.com/amuseproject"
+        },
+        {
+            type: "twitch",
+            link: "https://twitch.tv/amuseproject"
+        }
+    ]
+  },
+  {
+    id:6,
+    name:"Cassie-Sama",
+    location:"Brisbane/Meanjin",
+    logo: "",
+    genre: "Eurobeat, Rock, Metal",
+    description:`<p>
+            Breaking through your screen and into your heart!
+            <br\>It's Cassie Sama!
+            <br\><br\>
+            Cassie-Sama is a solo kaigai idol based in Brisbane who captivates J-Pop enthusiasts with her unique shows. Since 2022, she has performed live throughout Australia and virtually around the globe. Her music focuses on idol culture, using Eurobeat, rock, and metal to create a unique sound. Drawing inspiration from past and future technology, experiences, and current events, Cassie-Sama's performances are both innovative and mesmerising!
+            </p>
+        <br><i>From Youtube 10/3/26</i>`,
+    socials: [
+        {
+            type: "instagram",
+            link: "https://www.instagram.com/cassiesama_/"
+        },
+        {
+            type: "tiktok",
+            link: "https://www.tiktok.com/@cassie.sama"
+        },
+        {
+            type: "youtube",
+            link: "https://www.youtube.com/@cassiesama2903"
+        },
+        {
+            type: "twitter",
+            link: "https://twitter.com/cassiesama"
+        },
+        {
+            type: "spotify",
+            link: "https://open.spotify.com/artist/1N2A2ppfmw1pK5RdzsEgx8"
+        },
+        {
+            type: "website",
+            link: "https://cassie-sama.wixsite.com/cassie-sama"
+        },
+        {
+            type: "twitch",
+            link: "https://www.twitch.tv/cassiesama"
+        }
+    ]
+  },
+  {
+    id:7,
+    name:"CH4i",
+    location:"Brisbane/Meanjin",
+    logo: "",
+    genre: "Jpop",
+    description:`<p>
+            💚 Wan Wan…NUMBER 1! Brisbane’s green soloist Ch4i is here! Just like chai is his drink of choice, Ch4i hopes to become your idol of choice, so let’s have a latte of fun together! 💚
+            <br\><br\>
+            Ch4i is an independent kaigai idol based in Brisbane, Australia. With an experience in the local Australian idol community of 10 years and even longer in the performing arts industry, Ch4i is a seasoned professional with their own unique image and original music being put out into the world! 🐶
+            </p>
+        <br><i>From Youtube 10/3/26</i>`,
+    socials: [
+        {
+            type: "instagram",
+            link: "https://www.instagram.com/ch4i_html/"
+        },
+        {
+            type: "youtube",
+            link: "www.youtube.com/@Ch4i-Latte"
+        },
+        {
+            type: "spotify",
+            link: "https://open.spotify.com/artist/4qnMOJwZtk1k7t3Dzh7wk9"
+        },
+        {
+            type: "website",
+            link: "https://ch4i-html.square.site/"
+        }
+    ]
   }
 ];
