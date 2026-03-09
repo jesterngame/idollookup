@@ -262,7 +262,10 @@ function renderIdolGroupList(list = []){
 
   app.innerHTML = idolGroupPage;
 
-  $(".idolgroup").addEventListener("onclick", renderIdolGroup($(this).attr("id")));
+  $(".idolgroup").on("click", function() {
+    const id = $(this).attr("id");
+    renderIdolGroup(id);
+  });
 
 
 };
@@ -281,6 +284,7 @@ searchInput.addEventListener("input", function(){
 });
 
 renderIdolGroupList(idolgroups)
+
 
 
 
