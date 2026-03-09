@@ -1,4 +1,4 @@
-import { idols } from './data.js';
+import { idols } from './idols.js';
 
 function formatDate(date){
   const d = new Date(date)
@@ -269,6 +269,7 @@ function renderIdolGroup(id){
 }
 
 renderIdolGroupList(idolgroups)
+
 
 
 
