@@ -1,5 +1,6 @@
 import {idols} from './idols.js';
 
+console.log("test code runs");
 console.log(idols);
 
 function formatDate(date){
@@ -271,6 +272,7 @@ searchInput.addEventListener("input", function(){
 });
 
 renderIdolGroupList(idolgroups)
+
 
 
 
