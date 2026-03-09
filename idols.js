@@ -70,7 +70,7 @@ export const idols = [
     {
         id: 5,
         group: [2],
-        name: "Ada",
+        name: "Ada (hiatus)",
         image: "imgs/temp_portrait.png",
         idoltype: "Fruit",
         colour: "Red",
@@ -126,8 +126,107 @@ export const idols = [
             }
         ]
     },
+    {
+        id: 9,
+        group: [4],
+        name: "May",
+        image: "imgs/temp_portrait.jpg",
+        idoltype: "",
+        colour: "Purple",
+        socials: [
+        ]
+    },
+    {
+        id: 10,
+        group: [4],
+        name: "Ruru",
+        image: "imgs/temp_portrait.jpg",
+        idoltype: "",
+        colour: "Pink",
+        socials: [
+        ]
+    },
+    {
+        id: 11,
+        group: [5],
+        name: "Lolly (hiatus)",
+        image: "imgs/temp_portrait.jpg",
+        idoltype: "",
+        colour: "Purple",
+        socials: [
+        ]
+    },
+    {
+        id: 12,
+        group: [5],
+        name: "Kate",
+        image: "imgs/temp_portrait.jpg",
+        idoltype: "",
+        colour: "Blue",
+        socials: [
+        ]
+    },
+    {
+        id: 13,
+        group: [5],
+        name: "Rinya",
+        image: "imgs/temp_portrait.jpg",
+        idoltype: "",
+        colour: "Monochrome",
+        socials: [
+        ]
+    },
+    {
+        id: 14,
+        group: [5],
+        name: "Pengi",
+        image: "imgs/temp_portrait.jpg",
+        idoltype: "",
+        colour: "Pink",
+        socials: [
+        ]
+    },
+    {
+        id: 15,
+        group: [5],
+        name: "Luvkii",
+        image: "imgs/temp_portrait.jpg",
+        idoltype: "",
+        colour: "Red",
+        socials: [
+        ]
+    },
+    {
+        id: 16,
+        group: [5],
+        name: "ALEKS",
+        image: "imgs/temp_portrait.jpg",
+        idoltype: "",
+        colour: "Yellow",
+        socials: [
+        ]
+    },
+    {
+        id: 17,
+        group: [6],
+        name: "Cassie-Sama",
+        image: "imgs/temp_portrait.jpg",
+        idoltype: "",
+        colour: "Purple",
+        socials: [
+        ]
+    },
+    {
+        id: 18,
+        group: [7],
+        name: "Ch4i",
+        image: "imgs/temp_portrait.jpg",
+        idoltype: "",
+        colour: "Green",
+        socials: [
+        ]
+    }
 ];
-
 
 
 
