@@ -2,9 +2,6 @@ import {idols} from './idols.js';
 import {idolgroups} from './idolgroups.js';
 import {events} from './events.js';
 
-console.log("test code runs");
-console.log(idols);
-
 function formatDate(date){
   const d = new Date(date);
   const day = String(d.getDate()).padStart(2,'0');
@@ -40,18 +37,13 @@ function makeSocials(type, link, size){
 
 const app = document.getElementById("app");
 
-console.log("Before renderIdolGroup defined");
 function renderIdolGroup(idtext){
     $("#groupsearch").addClass('hidden');
     $("#search").val('');
     let id = Number(idtext);
-    console.log("ID");
-    console.log(id);
-    console.log("Idol groups from ID");
+
     const idolgroup = idolgroups.find(group=>group.id=id);
-    console.log(idolgroup);
-  
-    console.log("Id old from ID");
+
     const idolmembers = idols.filter(idols=>idols.group.includes(id));
 
     const upcomingEvents = events.filter(events=>events.groups.includes(id));
@@ -136,8 +128,6 @@ function renderIdolGroup(idtext){
     `
 };
 
-console.log("After renderIdolGroup defined");
-
 function renderIdolGroupList(list = []){
   $("#groupsearch").removeClass('hidden');
   let idolGroupHtml = ``;
@@ -190,6 +180,7 @@ renderIdolGroupList(idolgroups);
 $('#group-search-button').on("click", function(){
   renderIdolGroupList(idolgroups);
 });
+
 
 
 
