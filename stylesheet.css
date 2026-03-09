@@ -78,6 +78,10 @@ footer {
     gap: 15px;
     margin-bottom: 15px;
     padding: 10px;
+    font-size: 1.5em;
+    width: 350px;
+    height: 110px;
+    text-align: center;
     background-color: #e9e9e9;
 }
 
@@ -86,23 +90,36 @@ footer {
   flex-direction: column;
 }
 
+#group-search-button {
+    padding: 15px;
+    font-size: 30px;
+}
+
+h1 {
+  font-size: 4em;
+  margin: 15px;
+}
+
 .large-social {
-    font-size: 4em;
+    font-size: 6em;
     padding: 10px;
 }
 
 .medium-social {
-    font-size: 2em;
+    font-size: 3em;
     padding: 4px;
 }
 
 .idol-logo-search {
-    width: 50px;
+    width: 100px;
     height: auto;
 }
 
 .group-search-container {
     justify-content: center;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
 }
 
 
@@ -128,6 +145,4 @@ footer {
 #search {
     height: 30px;
     width: 300px;
-    font-size: 16px;
 }
-
