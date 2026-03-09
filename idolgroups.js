@@ -18,6 +18,14 @@ export const idolgroups = [
         {
             type: "instagram",
             link: "https://www.instagram.com/bloom_idol_project"
+        },
+        {
+            type: "youtube",
+            link: "https://www.youtube.com/@BloomIdolProject"
+        },
+        {
+            type: "twitter",
+            link: "https://x.com/bloomidols"
         }
     ]
   },
@@ -36,6 +44,14 @@ export const idolgroups = [
         {
             type: "instagram",
             link: "https://www.instagram.com/snacktimeidols"
+        },
+        {
+            type: "youtube",
+            link: "https://www.youtube.com/@SnackTimeIdolAU"
+        },
+        {
+            type: "website",
+            link: "https://snack-time-idols.square.site/"
         }
     ]
   },
