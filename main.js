@@ -271,7 +271,7 @@ function renderIdolGroupList(list = []){
 
 };
 
-$("#search").addEventListener("input", function(){
+$("#search").on("input", function(){
 
   const query = this.value.toLowerCase()
 
@@ -284,9 +284,10 @@ $("#search").addEventListener("input", function(){
 
 renderIdolGroupList(idolgroups);
 
-$('#group-search-button').addEventListener("onclick", function(){
+$('#group-search-button').on("onclick", function(){
   renderIdolGroupList(idolgroups);
 });
+
 
 
 
