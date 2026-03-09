@@ -284,9 +284,10 @@ $("#search").on("input", function(){
 
 renderIdolGroupList(idolgroups);
 
-$('#group-search-button').on("onclick", function(){
+$('#group-search-button').on("click", function(){
   renderIdolGroupList(idolgroups);
 });
+
 
 
 
