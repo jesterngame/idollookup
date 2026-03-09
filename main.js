@@ -42,11 +42,11 @@ const idols = [
         socials: [
             {
                 type: "instagram",
-                link: ""
+                link: "https://www.instagram.com/ohmyisabella"
             },
             {
                 type: "twitter",
-                link: ""
+                link: "https://x.com/OhmyIsabellaa"
             }
         ]
     },
@@ -60,11 +60,11 @@ const idols = [
         socials: [
             {
                 type: "instagram",
-                link: ""
+                link: "https://www.instagram.com/bloomymei"
             },
             {
                 type: "twitter",
-                link: ""
+                link: "https://x.com/japchefreak"
             }
         ]
     },
@@ -78,11 +78,11 @@ const idols = [
         socials: [
             {
                 type: "instagram",
-                link: ""
+                link: "https://www.instagram.com/misty_bloomingblue"
             },
             {
                 type: "twitter",
-                link: ""
+                link: "https://x.com/misty_bloomblue"
             }
         ]
     },
@@ -96,7 +96,7 @@ const idols = [
         socials: [
             {
                 type: "instagram",
-                link: "https://www.instagram.com/snacktimeidols"
+                link: "https://www.instagram.com/purinpuddin"
             }
         ]
     },
@@ -110,7 +110,7 @@ const idols = [
         socials: [
             {
                 type: "instagram",
-                link: ""
+                link: "https://www.instagram.com/ada.apples"
             }
         ]
     },
@@ -124,7 +124,7 @@ const idols = [
         socials: [
             {
                 type: "instagram",
-                link: ""
+                link: "https://www.instagram.com/chiidolz"
             }
         ]
     },
@@ -135,12 +135,7 @@ const idols = [
         image: "temp_portrait.png",
         idoltype: "Soda",
         colour: "Orange",
-        socials: [
-            {
-                type: "instagram",
-                link: ""
-            }
-        ]
+        socials: []
     },
     {
         id: 8,
@@ -247,31 +242,31 @@ const idolgroups = [
 const events = [
     {
         id:1,
-        name: "Example Event",
+        name: "Unknown Event",
         city: "Brisbane/Meanjin",
-        address: "Example Venue address",
-        ticketlink: "https://www.w3schools.com/",
-        groups: [1, 2],
-        date: new Date(2026, 3, 15) // year, month (0-11), day
+        address: "Not yet known",
+        ticketlink: "",
+        groups: [2],
+        date: new Date(2026, 3, 13) // year, month (0-11), day
     },
     {
         id:2,
-        name: "Example Event Old",
-        city: "Brisbane/Meanjin",
-        address: "Example Venue address",
-        ticketlink: "",
-        groups: [1],
-        date: new Date(2025, 3, 15) // year, month (0-11), day
+        name: "animaga Sunday",
+        city: "Sydney/Gadigal",
+        address: "ICC Sydney",
+        ticketlink: "http://instagram.com/animagaexpo",
+        groups: [3],
+        date: new Date(2026, 2, 15) // year, month (0-11), day
     }
 ];
 
 const app = document.getElementById("app");
 
-function renderIdolGroupList(){
-
+function renderIdolGroupList(list){
+    $("#groupsearch").removeClass('hidden');
   let idolGroupHtml = ``;
 
-  idolgroups.forEach(group=>{
+  list.forEach(group=>{
     idolGroupHtml += `
       <div class="idolgroup" onclick="renderIdolGroup(${group.id})">
         <img class="idol-logo-search" src="${group.logo}" alt="idol logo">
@@ -285,25 +280,35 @@ function renderIdolGroupList(){
 
   let idolGroupPage = `
     <div class="container">
-        <div class="column left">
-        </div>
-
-        <div class="column middle">
-            <h1>Idol Groups</h1>
+        <div class="column searchpage">
             <div class="group-search-container">
                 ${idolGroupHtml}
             </div>
-        </div>
-
-        <div class="column right">
         </div>
     </div>
   `;
 
   app.innerHTML = idolGroupPage;
+
+
 };
 
+const searchInput = document.getElementById("search");
+
+searchInput.addEventListener("input", function(){
+
+  const query = this.value.toLowerCase()
+
+  const filtered = idolgroups.filter(idolgroup =>
+    idolgroup.name.toLowerCase().includes(query)
+  )
+
+  renderIdolGroupList(filtered);
+})
+
 function renderIdolGroup(id){
+    $("#groupsearch").addClass('hidden');
+    $("#search").val('');
 
     const idolgroup = idolgroups.find(group=>group.id===id)
 
@@ -391,8 +396,4 @@ function renderIdolGroup(id){
     `
 }
 
-
-renderIdolGroupList();
-
-
-
+renderIdolGroupList(idolgroups)
