@@ -130,7 +130,7 @@ export const idols = [
         id: 9,
         group: [4],
         name: "May",
-        image: "imgs/temp_portrait.jpg",
+        image: "imgs/temp_portrait.png",
         idoltype: "",
         colour: "Purple",
         socials: [
@@ -140,7 +140,7 @@ export const idols = [
         id: 10,
         group: [4],
         name: "Ruru",
-        image: "imgs/temp_portrait.jpg",
+        image: "imgs/temp_portrait.png",
         idoltype: "",
         colour: "Pink",
         socials: [
@@ -150,7 +150,7 @@ export const idols = [
         id: 11,
         group: [5],
         name: "Lolly (hiatus)",
-        image: "imgs/temp_portrait.jpg",
+        image: "imgs/temp_portrait.png",
         idoltype: "",
         colour: "Purple",
         socials: [
@@ -160,7 +160,7 @@ export const idols = [
         id: 12,
         group: [5],
         name: "Kate",
-        image: "imgs/temp_portrait.jpg",
+        image: "imgs/temp_portrait.png",
         idoltype: "",
         colour: "Blue",
         socials: [
@@ -170,7 +170,7 @@ export const idols = [
         id: 13,
         group: [5],
         name: "Rinya",
-        image: "imgs/temp_portrait.jpg",
+        image: "imgs/temp_portrait.png",
         idoltype: "",
         colour: "Monochrome",
         socials: [
@@ -180,7 +180,7 @@ export const idols = [
         id: 14,
         group: [5],
         name: "Pengi",
-        image: "imgs/temp_portrait.jpg",
+        image: "imgs/temp_portrait.png",
         idoltype: "",
         colour: "Pink",
         socials: [
@@ -190,7 +190,7 @@ export const idols = [
         id: 15,
         group: [5],
         name: "Luvkii",
-        image: "imgs/temp_portrait.jpg",
+        image: "imgs/temp_portrait.png",
         idoltype: "",
         colour: "Red",
         socials: [
@@ -200,7 +200,7 @@ export const idols = [
         id: 16,
         group: [5],
         name: "ALEKS",
-        image: "imgs/temp_portrait.jpg",
+        image: "imgs/temp_portrait.png",
         idoltype: "",
         colour: "Yellow",
         socials: [
@@ -210,7 +210,7 @@ export const idols = [
         id: 17,
         group: [6],
         name: "Cassie-Sama",
-        image: "imgs/temp_portrait.jpg",
+        image: "imgs/temp_portrait.png",
         idoltype: "",
         colour: "Purple",
         socials: [
@@ -220,7 +220,7 @@ export const idols = [
         id: 18,
         group: [7],
         name: "Ch4i",
-        image: "imgs/temp_portrait.jpg",
+        image: "imgs/temp_portrait.png",
         idoltype: "",
         colour: "Green",
         socials: [
