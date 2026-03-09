@@ -137,18 +137,15 @@ const events = [
 
 const app = document.getElementById("app");
 
-console.log("Idol groups from ID");
-console.log(idolgroups.find(group=>group.id===id));
-
-console.log("Idold from ID");
-console.log(idols.filter(idols=>idols.group.includes(id)));
-
+console.log("Before renderIdolGroup defined");
 function renderIdolGroup(id){
     $("#groupsearch").addClass('hidden');
     $("#search").val('');
-
+  
+    console.log("Idol groups from ID");
     const idolgroup = idolgroups.find(group=>group.id===id)
-
+  
+    console.log("Idold from ID");
     const idolmembers = idols.filter(idols=>idols.group.includes(id));
 
     const upcomingEvents = events.filter(events=>events.groups.includes(id));
@@ -233,6 +230,8 @@ function renderIdolGroup(id){
     `
 };
 
+console.log("After renderIdolGroup defined");
+
 function renderIdolGroupList(list){
     $("#groupsearch").removeClass('hidden');
   let idolGroupHtml = ``;
@@ -278,6 +277,7 @@ searchInput.addEventListener("input", function(){
 });
 
 renderIdolGroupList(idolgroups)
+
 
 
 
