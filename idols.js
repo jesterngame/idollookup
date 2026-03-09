@@ -91,7 +91,7 @@ export const idols = [
         socials: [
             {
                 type: "instagram",
-                link: "https://www.instagram.com/chiidolz"
+                link: "https://www.instagram.com/chiidolz_"
             }
         ]
     },
@@ -127,5 +127,6 @@ export const idols = [
         ]
     },
 ];
+
 
 
