@@ -209,8 +209,10 @@ function renderEvent(idtext){
         });
 
         idolGroupshtml += `<div class="idol-member">
+                <div class="idol-group-link" id="${idolgroup.id}">
                 <img class="circle-img" src="${idolgroup.logo}" alt="${idolgroup.name}">
                 <h3>${idolgroup.name}</h3>
+                </div>
                 <div class="individual-member-socials">
                     ${idolGroupSocialsHtml}
                 </div>
@@ -246,7 +248,12 @@ function renderEvent(idtext){
                 <p><a href="${event.ticketlink}" target="_blank"> <i class="fa-solid fa-ticket large-social"></i></a></p>
             </div>
         </div>
-    `
+    `;
+
+    $(".idol-group-link").on("click", function() {
+        const id = $(this).attr("id");
+        renderIdolGroup(id);
+    });
 }
 
 
@@ -301,6 +308,7 @@ function renderEventList(list = []){
 $('#event-search-button').on("click", function(){
   renderEventList(events);
 });
+
 
 
 
