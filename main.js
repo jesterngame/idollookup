@@ -265,7 +265,7 @@ function renderEventList(list = []){
     if(today <= event.date){
         let eventDatePhrased = formatDate(eventDate);
         eventListHtml += `
-            <div class="event-short">
+            <div class="event-short" id="${event.id}">
                 <img class="event-img-search" src="${event.img}" alt="Event Poster">
                 <div class="event-info">
                     <strong class="event-info-name">${event.name}</strong>
@@ -301,6 +301,7 @@ function renderEventList(list = []){
 $('#event-search-button').on("click", function(){
   renderEventList(events);
 });
+
 
 
 
