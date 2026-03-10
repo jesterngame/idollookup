@@ -95,7 +95,7 @@ function renderIdolGroup(idtext){
             }
           
             eventshtml += `<div class="upcoming-event">
-                    <h3>${event.name}</h3>
+                    <div class="event-link" id="${event.id}"><h3>${event.name}</h3></div>
                     <p><i class="fa-solid fa-calendar"></i>${eventDatePhrased}</p>
                     <p><i class="fa-solid fa-city"></i> ${event.city}</p>
                     <p><i class="fa-solid fa-location-dot"></i> ${event.address}</p>
@@ -141,7 +141,12 @@ function renderIdolGroup(idtext){
                 </p>
             </div>
         </div>
-    `
+    `;
+
+    $(".event-link").on("click", function() {
+        const id = $(this).attr("id");
+        renderEvent(id);
+    });
 };
 
 function renderIdolGroupList(list = []){
@@ -317,6 +322,7 @@ function renderEventList(list = []){
 $('#event-search-button').on("click", function(){
   renderEventList(events);
 });
+
 
 
 
