@@ -1,10 +1,10 @@
 export const events = [
     {
         id:1,
-        name: "Unknown Event",
+        name: "Unknown Event by Snacktime",
         city: "Brisbane/Meanjin",
         address: "Not yet known",
-        description: `<p>An event being put on by Snacktime</p>`,
+        description: `<p>An event being put on by SnackTime</p>`,
         ticketlink: "",
         groups: [2],
         date: new Date(2026, 3, 13) // year, month (0-11), day
