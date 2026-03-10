@@ -115,8 +115,8 @@ function renderIdolGroup(idtext){
             <div class="column left">
                 <img class="idol-logo" src="${idolgroup.logo}" alt="idol logo">
                 <h2>${idolgroup.name}</h2>
-                    <p>Location: ${idolgroup.location}</p>
-                    <p>Genre: ${idolgroup.genre}</p>
+                    <p><i class="fa-solid fa-city"></i> ${idolgroup.location}</p>
+                    <p><i class="fa-solid fa-music"></i> ${idolgroup.genre}</p>
                 <h2>About</h2>
                 <p>${idolgroup.description}</p>
             </div>
@@ -317,6 +317,7 @@ function renderEventList(list = []){
 $('#event-search-button').on("click", function(){
   renderEventList(events);
 });
+
 
 
 
