@@ -16,6 +16,7 @@ export const events = [
         address: "ICC Sydney",
         description: `<p>Mark your calendars! Animaga is coming to ICC Sydney on 14–15 March 2026, bringing two unforgettable days packed with anime, fandom, and excitement. For the very first time, Animaga is setting the stage in Sydney, and we're ready to make it an event to remember.</p>`,
         ticketlink: "http://instagram.com/animagaexpo",
+        img: "imgs/animaga_2026_sydney.jpg",
         groups: [3],
         date: new Date(2026, 2, 15) // year, month (0-11), day
     },
