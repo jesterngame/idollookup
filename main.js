@@ -298,6 +298,10 @@ function renderEventList(list = []){
 
 };
 
+$('#event-search-button').on("click", function(){
+  renderEventList(events);
+});
+
 
 
 
