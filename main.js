@@ -79,11 +79,18 @@ function renderIdolGroup(idtext){
         if(today <= event.date){
             let eventDatePhrased = formatDate(eventDate);
 
+            let eventLink = ``;
+
+            if(event.ticketlink != ''){
+                eventLink += `<p><a href="${event.ticketlink}" target="_blank"> <i class="fa-solid fa-ticket"></i></a></p>`;
+            }
+          
             eventshtml += `<div class="upcoming-event">
-                    <h3>${event.name} <a href="${event.ticketlink}" target="_blank"><i class="fa-solid fa-ticket"></i></a></h3>
-                    <p>${eventDatePhrased}</p>
-                    <p>${event.city}</p>
-                    <p>${event.address}</p>
+                    <h3>${event.name}</h3>
+                    <p><i class="fa-solid fa-calendar"></i>${eventDatePhrased}</p>
+                    <p><i class="fa-solid fa-city"></i> ${event.city}</p>
+                    <p><i class="fa-solid fa-location-dot"></i> ${event.address}</p>
+                    ${eventLink}
                 </div>`;
         }
     });
@@ -181,6 +188,115 @@ $('#group-search-button').on("click", function(){
   renderIdolGroupList(idolgroups);
 });
 
+function renderEvent(idtext){
+    $("#groupsearch").addClass('hidden');
+    $("#search").val('');
+    let id = Number(idtext);
+
+    const event = events.find(event=>event.id===id);
+    console.log(event);
+    const idolgroupsinevent = idolgroups.filter(group=>event.groups.includes(group.id));
+    
+    console.log(idolgroupsinevent);
+
+    let idolGroupshtml = ``;
+
+    idolgroupsinevent.forEach(function(idolgroup){
+
+        let idolGroupSocialsHtml = ``;
+        idolgroup.socials.forEach(function(social){
+            idolGroupSocialsHtml += makeSocials(social.type, social.link, 'medium-social');
+        });
+
+        idolGroupshtml += `<div class="idol-member">
+                <img class="circle-img" src="${idolgroup.logo}" alt="${idolgroup.name}">
+                <h3>${idolgroup.name}</h3>
+                <div class="individual-member-socials">
+                    ${idolGroupSocialsHtml}
+                </div>
+            </div>`;
+    });
+
+    const eventDate = event.date;
+    eventDate.setHours(0,0,0,0);
+    let eventDatePhrased = formatDate(eventDate);
+
+    app.innerHTML = `
+        <div class="container">
+            <div class="column left">
+                <img class="idol-logo" src="${event.img}" alt="Event Poster">
+                <h2>${event.name}</h2>
+                    <p><i class="fa-solid fa-calendar"></i> ${eventDatePhrased}</p>
+                    <p><i class="fa-solid fa-city"></i> ${event.city}</p>
+                    <p><i class="fa-solid fa-location-dot"></i> ${event.address}</p>
+            </div>
+
+            <div class="column middle">
+                <h2>Groups</h2>
+                <div class="idol-group-members">
+                    ${idolGroupshtml}
+                </div>
+
+            </div>
+
+            <div class="column right">
+                <h2>About</h2>
+                <p>${event.description}</p>
+
+                <p><a href="${event.ticketlink}" target="_blank"> <i class="fa-solid fa-ticket large-social"></i></a></p>
+            </div>
+        </div>
+    `
+}
+
+
+function renderEventList(list = []){
+    $("#groupsearch").addClass('hidden');
+    let eventListHtml = ``;
+
+    const today = new Date()
+    today.setHours(0,0,0,0)
+
+    list.forEach(event=>{
+
+    const eventDate = event.date
+    eventDate.setHours(0,0,0,0)
+
+    if(today <= event.date){
+        let eventDatePhrased = formatDate(eventDate);
+        eventListHtml += `
+            <div class="event-short">
+                <img class="event-img-search" src="${event.img}" alt="Event Poster">
+                <div class="event-info">
+                    <strong class="event-info-name">${event.name}</strong>
+                    <div><i class="fa-solid fa-city"></i> ${event.city}</div>
+                    <div><i class="fa-solid fa-calendar"></i> ${eventDatePhrased}</div>
+                </div>
+            </div>
+        `
+    }
+    
+    });
+
+    let eventSearchPage = `
+    <div class="container">
+        <div class="column searchpage">
+            <div class="event-search-container">
+                ${eventListHtml}
+            </div>
+        </div>
+    </div>
+    `;
+
+    app.innerHTML = eventSearchPage;
+
+    $(".event-short").on("click", function() {
+        const id = $(this).attr("id");
+        renderEvent(id);
+    });
+
+
+};
 
 
 
