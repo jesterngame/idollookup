@@ -30,13 +30,13 @@ function makeSocials(type, link, size){
             socialHtml += `<a href="${link}" target="_blank"><i class="${size} fa-brands fa-spotify"></i></a>`;
             break;
         case "patreon":
-            socialHtml += `<a href="${link}" target="_blank"><i class="${size} fa-solid fa-patreon"></i></a>`;
+            socialHtml += `<a href="${link}" target="_blank"><i class="${size} fa-brands fa-patreon"></i></a>`;
             break;
         case "website":
             socialHtml += `<a href="${link}" target="_blank"><i class="${size} fa-solid fa-globe"></i></a>`;
             break;
         case "twitch":
-            socialHtml += `<a href="${link}" target="_blank"><i class="${size} fa-solid fa-twitch"></i></a>`;
+            socialHtml += `<a href="${link}" target="_blank"><i class="${size} fa-brands fa-twitch"></i></a>`;
             break;
         default:
     }
@@ -317,6 +317,7 @@ function renderEventList(list = []){
 $('#event-search-button').on("click", function(){
   renderEventList(events);
 });
+
 
 
 
