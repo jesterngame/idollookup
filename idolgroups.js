@@ -111,7 +111,7 @@ export const idolgroups = [
         },
         {
             type: "youtube",
-            link: "www.youtube.com/@SeiryouProcess"
+            link: "https://www.youtube.com/@SeiryouProcess"
         },
         {
             type: "twitter",
@@ -144,7 +144,7 @@ export const idolgroups = [
         },
         {
             type: "youtube",
-            link: "www.youtube.com/@AMUSE_PRO"
+            link: "https://www.youtube.com/@AMUSE_PRO"
         },
         {
             type: "twitter",
@@ -227,7 +227,7 @@ export const idolgroups = [
         },
         {
             type: "youtube",
-            link: "www.youtube.com/@Ch4i-Latte"
+            link: "https://www.youtube.com/@Ch4i-Latte"
         },
         {
             type: "spotify",
