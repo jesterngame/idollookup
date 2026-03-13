@@ -46,6 +46,11 @@ footer {
     .container {
         flex-direction: column;
     }
+
+    .qr-code-share {
+        width: 100%;
+        height: 100%;
+    }
 }
 
 .circle-img {
