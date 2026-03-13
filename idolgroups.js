@@ -243,7 +243,7 @@ export const idolgroups = [
         id: 8,
         name: "LoveChord",
         location: "Sydney/Eora",
-        logo: "",
+        logo: "imgs/lovechord_logo.jpg",
         genre: "",
         description:`<p>A 4 member kaigai idol with a sweet, dark & energetic concept themed around the cycle of love!
         <br/><br/>
@@ -275,7 +275,7 @@ export const idolgroups = [
         id: 9,
         name: "ReVeil",
         location: "Sydney/Eora",
-        logo: "",
+        logo: "imgs/reveil_logo.jpg",
         genre: "",
         description:`<p>An idol group based in Sydney/Eora, Australia! 
         <br/><br/>
@@ -309,7 +309,7 @@ export const idolgroups = [
         id: 10,
         name: "Undead Online",
         location: "Melbourne/Naarm",
-        logo: "",
+        logo: "imgs/undeadonline_logo.jpg",
         genre: "",
         description:`<p>You can"t run and you can"t hide!! Formed in 2024, we are a Naarm, Australia based j-idol duo with an alternative monster concept. With our terrifyingly high energy and dedication we give performances that"ll keep you watching even if you"re frightened. From metal to spooky jpop, let"s raise enough energy to wake the dead!!!
         <br/><br/>
@@ -337,7 +337,7 @@ export const idolgroups = [
         id: 11,
         name: "Sour Candy",
         location: "Sydney/Eora",
-        logo: "",
+        logo: "imgs/sourcandy_logo.jpg",
         genre: "",
         description:`<p>We are Sour Candy, a NSW, Australia based kaigai idol/idol cover group!<br/>
         The two members that make up Sour Candy are Bibi and Jinx.<br/>
@@ -364,7 +364,7 @@ export const idolgroups = [
         id: 12,
         name: "ViVID",
         location: "Sydney/Eora",
-        logo: "",
+        logo: "imgs/vivid_logo.jpg",
         genre: "",
         description:`<p>We are VIVID!
         <br/><br/>
@@ -417,7 +417,7 @@ export const idolgroups = [
         id: 14,
         name: "neoism",
         location: "Sydney/Eora",
-        logo: "",
+        logo: "imgs/neonism_logo.jpg",
         genre: "Rock, EDM",
         description:`<p>Sydney rock & EDM idol group
         <br/><br/>
@@ -437,7 +437,7 @@ export const idolgroups = [
         id: 15,
         name: "FAEBLE",
         location: "Sydney/Eora",
-        logo: "",
+        logo: "imgs/faeble_logo.jpg",
         genre: "",
         description:`<p>FAEBLE are a high energy, singing and dancing idol group with a rock inspired sound based in Sydney, AUSTRALIA! With years of experience on stage and running idol events, FAEBLE’s passion is bringing fun and interactive stages to all.
         <br/><br/>
@@ -471,7 +471,7 @@ export const idolgroups = [
         id: 16,
         name: "Part of Piece",
         location: "Sydney/Eora",
-        logo: "",
+        logo: "imgs/partofpiece_logo.jpg",
         genre: "",
         description:`<p>We are a J-pop idol group based in Sydney, Australia.<br/>
         We want to bring a new flavour to the world!
@@ -528,7 +528,7 @@ export const idolgroups = [
         id: 18,
         name: "Himizu",
         location: "Sydney/Eora",
-        logo: "",
+        logo: "imgs/himizu_logo.jpg",
         genre: "",
         description:`<p>HiMizu is a kaigai idol unit based in Eora/Sydney, Australia.<br/>
         There"s no me without you... We are HiMizu!<br/>
@@ -557,7 +557,7 @@ export const idolgroups = [
         id: 19,
         name: "Project Heart",
         location: "Sydney/Eora",
-        logo: "",
+        logo: "imgs/projectheart_logo.png",
         genre: "",
         description:`<p>Project Heart is a Sydney based MenChika idol Project that made their stage debut in 2025.Tay, (Current member) the demon prince promises to win fans" hearts and bring them endless happiness. Their core message is that fans are their cherished ones, a special force held forever in their hearts. This concept is reflected in a strong visual style, skilfully blending elements of darkness and intensity with a passionate, unwavering theme of an idol"s profound and eternal commitment to their loyal Cherished Ones.
         <br/><br/>
