@@ -8,7 +8,7 @@ export const events = [
         description: `<p>An event being put on by Snacktime</p>`,
         img: "imgs/temp_event_show.png",
         ticketlink: "",
-        groups: [2],
+        groups: [{ id: 2, mtime: "", btime: "" }],
         date: new Date(2026, 3, 13) // year, month (0-11), day
     },
     {
@@ -20,7 +20,7 @@ export const events = [
         description: `<p>Mark your calendars! Animaga is coming to ICC Sydney on 14–15 March 2026, bringing two unforgettable days packed with anime, fandom, and excitement. For the very first time, Animaga is setting the stage in Sydney, and we're ready to make it an event to remember.</p>`,
         ticketlink: "http://instagram.com/animagaexpo",
         img: "imgs/animaga_2026_sydney.jpg",
-        groups: [3],
+        groups: [{ id: 3, mtime: "", btime: "" }],
         date: new Date(2026, 2, 15) // year, month (0-11), day
     },
     {
@@ -51,7 +51,11 @@ export const events = [
                 <p/>`,
         ticketlink: "https://events.humanitix.com/full-throttle-idol-relay-live",
         img: "imgs/full_throttle_idol_relay_live.jpg",
-        groups: [5,6,7],
+        groups: [
+            { id: 5, mtime: "", btime: "" },
+            { id: 6, mtime: "", btime: "" },
+            { id: 7, mtime: "", btime: "" }            
+        ],
         date: new Date(2026, 2, 14) // year, month (0-11), day
     },
     {
