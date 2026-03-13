@@ -338,9 +338,29 @@ function renderEventList(list = []){
 };
 
 $('#event-search-button').on("click", function(){
-  renderEventList(events);
+  renderShare();
 });
 
+function renderShare(){
+    $("#groupsearch").addClass('hidden');
+    let eventSearchPage = `
+    <div class="container">
+        <div class="column searchpage">
+            <div>
+                <h1>Share</h1>
+                <p>Show this QR to a fellow fan so they can scan and access.</p>
+                <img class="" src="imgs/qrcode_jesterngame.github.io.png" alt="qr code">
+            </div>
+        </div>
+    </div>
+    `;
+
+    app.innerHTML = eventSearchPage;
+}
+
+$('#share-button').on("click", function(){
+  renderEventList(events);
+});
 
 
 
