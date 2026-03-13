@@ -90,16 +90,6 @@ footer {
   flex-direction: column;
 }
 
-#group-search-button {
-    padding: 15px;
-    font-size: 30px;
-}
-
-#event-search-button {
-    padding: 15px;
-    font-size: 30px;
-}
-
 h1 {
   font-size: 4em;
   margin: 15px;
@@ -184,4 +174,9 @@ h1 {
     display: flex;
     gap: 15px;
     flex-wrap: wrap;
+}
+
+.nav-button {
+    padding: 15px;
+    font-size: 30px;
 }
