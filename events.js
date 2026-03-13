@@ -1,9 +1,10 @@
 export const events = [
     {
         id:1,
-        name: "TBA",
+        name: "Unknown Event",
+        type: "live",
         city: "Brisbane/Meanjin",
-        address: "TBA",
+        address: "Not yet known",
         description: `<p>An event being put on by Snacktime</p>`,
         img: "imgs/temp_event_show.png",
         ticketlink: "",
@@ -13,6 +14,7 @@ export const events = [
     {
         id:2,
         name: "animaga Sunday",
+        type: "con",
         city: "Sydney/Eora",
         address: "ICC Sydney",
         description: `<p>Mark your calendars! Animaga is coming to ICC Sydney on 14–15 March 2026, bringing two unforgettable days packed with anime, fandom, and excitement. For the very first time, Animaga is setting the stage in Sydney, and we're ready to make it an event to remember.</p>`,
@@ -24,6 +26,7 @@ export const events = [
     {
         id:3,
         name: "Full Throttle Idol Relay Live",
+        type: "live",
         city: "Brisbane/Meanjin",
         address: "Hamilton Town Hall",
         description: `<p>VIP DOORS OPEN: 5:00PM
@@ -54,12 +57,27 @@ export const events = [
     {
         id:4,
         name: "animaga Saturday",
+        type: "con",
         city: "Sydney/Eora",
         address: "ICC Sydney",
         description: `<p>Mark your calendars! Animaga is coming to ICC Sydney on 14–15 March 2026, bringing two unforgettable days packed with anime, fandom, and excitement. For the very first time, Animaga is setting the stage in Sydney, and we're ready to make it an event to remember.</p>`,
         ticketlink: "http://instagram.com/animagaexpo",
         img: "imgs/animaga_2026_sydney.jpg",
-        groups: [8,9,10,11,12,13,14,15,16,17,18,19,1],
+        groups: [
+            { id: 8, mtime: "1030", btime: "1045" },
+            { id: 9, mtime: "1045", btime: "1100" },
+            { id: 10, mtime: "1100", btime: "1115" },
+            { id: 11, mtime: "1115", btime: "1130" },
+            { id: 12, mtime: "1200", btime: "1215" },
+            { id: 13, mtime: "1215", btime: "1230" },
+            { id: 14, mtime: "1230", btime: "1245" },
+            { id: 15, mtime: "1430", btime: "1445" },
+            { id: 16, mtime: "1445", btime: "1500" },
+            { id: 17, mtime: "1500", btime: "1515" },
+            { id: 18, mtime: "1545", btime: "1600" },
+            { id: 19, mtime: "1600", btime: "1615" },
+            { id: 1, mtime: "1615", btime: "1630" }
+        ],
         date: new Date(2026, 2, 14) // year, month (0-11), day
     }
 ];
