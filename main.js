@@ -49,7 +49,38 @@ function getPenlight(colour){
 
     switch(colour) {
         case "monochrome":
+        case "Ghost Grey":
+        case "Angelic White":
             penlight = 'white';
+            break;
+        case "Nostalgic Blue":
+        case "Ocean Wave Blue":
+        case "Stormy Blue":
+        case "Royal Blue":
+        case "Columbia Blue":
+            penlight = 'blue';
+            break; 
+        case "Light Blue":
+            penlight = 'lightskyblue';
+            break; 
+        case "Devilish Pink":
+        case "Rose Pink":
+        case "Hot Pink":
+            penlight = 'pink';
+            break;
+        case "Electric Yellow":
+            penlight = 'yellow';
+            break;
+        case "Royal Purple":
+        case "Deep Lilac":
+        case "Lavender":
+            penlight = 'purple';
+            break;
+        case "Neon Green":
+            penlight = 'green';
+            break;
+        case "Crimson Red":
+            penlight = 'red';
             break;
         default:
             penlight = colour;
@@ -128,10 +159,18 @@ function renderIdolGroup(idtext){
         groupSocialsHtml += makeSocials(social.type, social.link, 'large-social');
     });
 
+    let idolLogo = "";
+    
+    if(idolgroup.logo == ""){
+        idolLogo = "imgs/idol_temp_logo.png"
+    } else {
+        idolLogo = idolgroup.logo;
+    }
+
     app.innerHTML = `
         <div class="container">
             <div class="column left">
-                <img class="idol-logo" src="${idolgroup.logo}" alt="idol logo">
+                <img class="idol-logo" src="${idolLogo}" alt="idol logo">
                 <h2>${idolgroup.name}</h2>
                     <p><i class="fa-solid fa-city"></i> ${idolgroup.location}</p>
                     <p><i class="fa-solid fa-music"></i> ${idolgroup.genre}</p>
@@ -168,13 +207,22 @@ function renderIdolGroup(idtext){
 };
 
 function renderIdolGroupList(list = []){
+  list.sort((a, b) => a.name.localeCompare(b.name));
+  
   $("#groupsearch").removeClass('hidden');
   let idolGroupHtml = ``;
 
   list.forEach(group=>{
+    let idolLogo = "";
+    if(group.logo == ""){
+        idolLogo = "imgs/idol_temp_logo.png"
+    } else {
+        idolLogo = group.logo;
+    }
+    
     idolGroupHtml += `
       <div class="idolgroup" id="${group.id}">
-        <img class="idol-logo-search" src="${group.logo}" alt="idol logo">
+        <img class="idol-logo-search" src="${idolLogo}" alt="idol logo">
         <div class="idolgroup-info">
             <strong>${group.name}</strong>
             <div>${group.location}</div>
@@ -226,15 +274,21 @@ function renderEvent(idtext){
     let id = Number(idtext);
 
     const event = events.find(event=>event.id===id);
-    console.log(event);
     const idolgroupsinevent = idolgroups.filter(group=>event.groups.includes(group.id));
-    
-    console.log(idolgroupsinevent);
+    const orderMap = new Map(event.groups.map((id, index) => [id, index]));
+  
+    idolgroupsinevent.sort((a, b) => orderMap.get(a.id) - orderMap.get(b.id));
 
     let idolGroupshtml = ``;
 
     idolgroupsinevent.forEach(function(idolgroup){
-
+        let idolLogo = "";
+        if(idolgroup.logo == ""){
+            idolLogo = "imgs/idol_temp_logo.png"
+        } else {
+            idolLogo = idolgroup.logo;
+        }
+      
         let idolGroupSocialsHtml = ``;
         idolgroup.socials.forEach(function(social){
             idolGroupSocialsHtml += makeSocials(social.type, social.link, 'medium-social');
@@ -242,7 +296,7 @@ function renderEvent(idtext){
 
         idolGroupshtml += `<div class="idol-member">
                 <div class="idol-group-link" id="${idolgroup.id}">
-                <img class="circle-img" src="${idolgroup.logo}" alt="${idolgroup.name}">
+                <img class="circle-img" src="${idolLogo}" alt="${idolgroup.name}">
                 <h3>${idolgroup.name}</h3>
                 </div>
                 <div class="individual-member-socials">
@@ -294,7 +348,9 @@ function renderEventList(list = []){
     let eventListHtml = ``;
 
     const today = new Date()
-    today.setHours(0,0,0,0)
+    today.setHours(0,0,0,0);
+
+    list.sort((a, b) => a.date.getTime() - b.date.getTime());
 
     list.forEach(event=>{
 
@@ -361,6 +417,7 @@ function renderShare(){
 $('#share-button').on("click", function(){
   renderShare();
 });
+
 
 
 
