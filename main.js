@@ -349,7 +349,7 @@ function renderShare(){
             <div>
                 <h1>Share</h1>
                 <p>Show this QR to a fellow fan so they can scan and access.</p>
-                <img class="" src="imgs/qrcode_jesterngame.github.io.png" alt="qr code">
+                <img class="qr-code-share" src="imgs/qrcode_jesterngame.github.io.png" alt="qr code">
             </div>
         </div>
     </div>
@@ -361,6 +361,7 @@ function renderShare(){
 $('#share-button').on("click", function(){
   renderShare();
 });
+
 
 
 
