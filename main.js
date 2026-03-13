@@ -10,6 +10,16 @@ function formatDate(date){
   return `${day}/${month}/${year}`
 }
 
+function formatTime(time) {
+  const hours = parseInt(time.slice(0, 2));
+  const minutes = time.slice(2);
+
+  const period = hours >= 12 ? "PM" : "AM";
+  const hours12 = hours % 12 || 12;
+
+  return `${hours12}:${minutes} ${period}`;
+}
+
 function makeSocials(type, link, size){
     let socialHtml = ``;
 
@@ -274,10 +284,23 @@ function renderEvent(idtext){
     let id = Number(idtext);
 
     const event = events.find(event=>event.id===id);
-    const idolgroupsinevent = idolgroups.filter(group=>event.groups.includes(group.id));
-    const orderMap = new Map(event.groups.map((id, index) => [id, index]));
   
-    idolgroupsinevent.sort((a, b) => orderMap.get(a.id) - orderMap.get(b.id));
+    let idolgroupsinevent;
+    if(event.type == 'con'){
+        const groupIds = new Set(event.groups.map(g => g.id))
+
+        idolgroupsinevent = idolgroups.filter(group=>groupIds.has(group.id));
+
+        const orderMap = new Map(event.groups.map((id, index) => [id, index]));
+
+        idolgroupsinevent.sort((a, b) => orderMap.get(a.mtime) - orderMap.get(b.mtime));
+    } else {
+        idolgroupsinevent = idolgroups.filter(group=>event.groups.includes(group.id));
+        console.log(idolgroupsinevent);
+        const orderMap = new Map(event.groups.map((id, index) => [id, index]));
+
+        idolgroupsinevent.sort((a, b) => orderMap.get(a.id) - orderMap.get(b.id));
+    }
 
     let idolGroupshtml = ``;
 
@@ -287,6 +310,21 @@ function renderEvent(idtext){
             idolLogo = "imgs/idol_temp_logo.png"
         } else {
             idolLogo = idolgroup.logo;
+        }
+
+        let timeP = ``;
+        if(event.type == "con"){
+            let groupEventInfo = event.groups.find(group=>group.id===idolgroup.id);
+            if(groupEventInfo.mtime != ''){
+                timeP += `
+                    <p><i class="fa-solid fa-music"></i> ${formatTime(groupEventInfo.mtime)}</p>
+                `;
+            }
+            if(groupEventInfo.btime != ''){
+                timeP += `
+                    <p><i class="fa-solid fa-shop"></i></i> ${formatTime(groupEventInfo.btime)}</p>
+                `;
+            }
         }
       
         let idolGroupSocialsHtml = ``;
@@ -298,9 +336,7 @@ function renderEvent(idtext){
                 <div class="idol-group-link" id="${idolgroup.id}">
                 <img class="circle-img" src="${idolLogo}" alt="${idolgroup.name}">
                 <h3>${idolgroup.name}</h3>
-                </div>
-                <div class="individual-member-socials">
-                    ${idolGroupSocialsHtml}
+                ${timeP}
                 </div>
             </div>`;
     });
@@ -417,6 +453,7 @@ function renderShare(){
 $('#share-button').on("click", function(){
   renderShare();
 });
+
 
 
 
