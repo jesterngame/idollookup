@@ -338,7 +338,7 @@ function renderEventList(list = []){
 };
 
 $('#event-search-button').on("click", function(){
-  renderShare();
+  renderEventList(events);
 });
 
 function renderShare(){
@@ -359,8 +359,9 @@ function renderShare(){
 }
 
 $('#share-button').on("click", function(){
-  renderEventList(events);
+  renderShare();
 });
+
 
 
 
