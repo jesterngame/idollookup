@@ -1,19 +1,19 @@
 export const events = [
     {
         id:1,
-        name: "Unknown Event by Snacktime",
+        name: "Unknown Event",
         city: "Brisbane/Meanjin",
         address: "Not yet known",
-        description: `<p>An event being put on by SnackTime</p>`,
+        description: `<p>An event being put on by Snacktime</p>`,
+        img: "",
         ticketlink: "",
-        img: "imgs/temp_event_show.png",
         groups: [2],
         date: new Date(2026, 3, 13) // year, month (0-11), day
     },
     {
         id:2,
         name: "animaga Sunday",
-        city: "Sydney/Gadigal",
+        city: "Sydney/Eora",
         address: "ICC Sydney",
         description: `<p>Mark your calendars! Animaga is coming to ICC Sydney on 14–15 March 2026, bringing two unforgettable days packed with anime, fandom, and excitement. For the very first time, Animaga is setting the stage in Sydney, and we're ready to make it an event to remember.</p>`,
         ticketlink: "http://instagram.com/animagaexpo",
@@ -49,6 +49,17 @@ export const events = [
         ticketlink: "https://events.humanitix.com/full-throttle-idol-relay-live",
         img: "imgs/full_throttle_idol_relay_live.jpg",
         groups: [5,6,7],
+        date: new Date(2026, 2, 14) // year, month (0-11), day
+    },
+    {
+        id:4,
+        name: "animaga Saturday",
+        city: "Sydney/Eora",
+        address: "ICC Sydney",
+        description: `<p>Mark your calendars! Animaga is coming to ICC Sydney on 14–15 March 2026, bringing two unforgettable days packed with anime, fandom, and excitement. For the very first time, Animaga is setting the stage in Sydney, and we're ready to make it an event to remember.</p>`,
+        ticketlink: "http://instagram.com/animagaexpo",
+        img: "imgs/animaga_2026_sydney.jpg",
+        groups: [8,9,10,11,12,13,14,15,16,17,18,19,1],
         date: new Date(2026, 2, 14) // year, month (0-11), day
     }
 ];
