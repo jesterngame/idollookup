@@ -112,7 +112,7 @@ function renderIdolGroup(idtext){
 
     const idolmembers = idols.filter(idols=>idols.group.includes(id));
 
-    const upcomingEvents = events.filter(events=>events.groups.includes(id));
+    const upcomingEvents = events.filter(events=>events.groups.some(g => g.id === id));
 
     let membershtml = ``;
 
@@ -285,19 +285,10 @@ function renderEvent(idtext){
 
     const event = events.find(event=>event.id===id);
   
-    let idolgroupsinevent;
-    if(event.type == 'con'){
-        const groupIds = new Set(event.groups.map(g => g.id));
-        const orderMap = new Map(event.groups.map(g => [g.id, g.mtime]));
+    const groupIds = new Set(event.groups.map(g => g.id));
+    const orderMap = new Map(event.groups.map(g => [g.id, g.mtime]));
 
-        idolgroupsinevent = idolgroups.filter(group=>groupIds.has(group.id)).sort((a, b) => (orderMap.get(a.id) || Infinity) - (orderMap.get(b.id) || Infinity));
-    } else {
-        idolgroupsinevent = idolgroups.filter(group=>event.groups.includes(group.id));
-        console.log(idolgroupsinevent);
-        const orderMap = new Map(event.groups.map((id, index) => [id, index]));
-
-        idolgroupsinevent.sort((a, b) => orderMap.get(a.id) - orderMap.get(b.id));
-    }
+    const idolgroupsinevent = idolgroups.filter(group=>groupIds.has(group.id)).sort((a, b) => (orderMap.get(a.id) || Infinity) - (orderMap.get(b.id) || Infinity));
 
     let idolGroupshtml = ``;
 
@@ -310,18 +301,17 @@ function renderEvent(idtext){
         }
 
         let timeP = ``;
-        if(event.type == "con"){
-            let groupEventInfo = event.groups.find(group=>group.id===idolgroup.id);
-            if(groupEventInfo.mtime != ''){
-                timeP += `
-                    <p><i class="fa-solid fa-music"></i> ${formatTime(groupEventInfo.mtime)}</p>
-                `;
-            }
-            if(groupEventInfo.btime != ''){
-                timeP += `
-                    <p><i class="fa-solid fa-shop"></i></i> ${formatTime(groupEventInfo.btime)}</p>
-                `;
-            }
+        
+        let groupEventInfo = event.groups.find(group=>group.id===idolgroup.id);
+        if(groupEventInfo.mtime != ''){
+            timeP += `
+                <p><i class="fa-solid fa-music"></i> ${formatTime(groupEventInfo.mtime)}</p>
+            `;
+        }
+        if(groupEventInfo.btime != ''){
+            timeP += `
+                <p><i class="fa-solid fa-shop"></i></i> ${formatTime(groupEventInfo.btime)}</p>
+            `;
         }
       
         let idolGroupSocialsHtml = ``;
