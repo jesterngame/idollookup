@@ -44,6 +44,22 @@ function makeSocials(type, link, size){
     return socialHtml
 }
 
+function getPenlight(colour){
+    let penlight = '';
+
+    switch(colour) {
+        case "monochrome":
+            penlight = 'white';
+            break;
+        default:
+            penlight = colour;
+    }
+
+    let htmlMemberColorCss = `style="background-color: ${penlight}"`;
+
+    return htmlMemberColorCss
+}
+
 const app = document.getElementById("app");
 
 function renderIdolGroup(idtext){
@@ -66,8 +82,10 @@ function renderIdolGroup(idtext){
             idolSocialsHtml += makeSocials(social.type, social.link, 'medium-social');
         });
 
+        let backgroundColorPic = getPenlight(idol.colour);
+        
         membershtml += `<div class="idol-member">
-                <img class="circle-img" src="${idol.image}" alt="${idol.name}">
+                <img class="circle-img" src="imgs/temp_pfp.png" alt="${idol.name}" ${backgroundColorPic}>
                 <h3>${idol.name}</h3>
                 <p>Colour: ${idol.colour}</p>
                 <div class="individual-member-socials">
@@ -322,6 +340,7 @@ function renderEventList(list = []){
 $('#event-search-button').on("click", function(){
   renderEventList(events);
 });
+
 
 
 
