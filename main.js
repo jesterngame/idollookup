@@ -287,13 +287,10 @@ function renderEvent(idtext){
   
     let idolgroupsinevent;
     if(event.type == 'con'){
-        const groupIds = new Set(event.groups.map(g => g.id))
+        const groupIds = new Set(event.groups.map(g => g.id));
+        const orderMap = new Map(event.groups.map(g => [g.id, g.mtime]));
 
-        idolgroupsinevent = idolgroups.filter(group=>groupIds.has(group.id));
-
-        const orderMap = new Map(event.groups.map((id, index) => [id, index]));
-
-        idolgroupsinevent.sort((a, b) => orderMap.get(a.mtime) - orderMap.get(b.mtime));
+        idolgroupsinevent = idolgroups.filter(group=>groupIds.has(group.id)).sort((a, b) => (orderMap.get(a.id) || Infinity) - (orderMap.get(b.id) || Infinity));
     } else {
         idolgroupsinevent = idolgroups.filter(group=>event.groups.includes(group.id));
         console.log(idolgroupsinevent);
@@ -453,6 +450,7 @@ function renderShare(){
 $('#share-button').on("click", function(){
   renderShare();
 });
+
 
 
 
