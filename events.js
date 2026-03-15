@@ -82,6 +82,6 @@ export const events = [
             { id: 19, mtime: "1600", btime: "1615" },
             { id: 1, mtime: "1615", btime: "1630" }
         ],
-        date: new Date(2026, 2, 15) // year, month (0-11), day
+        date: new Date(2026, 2, 14) // year, month (0-11), day
     }
 ];
